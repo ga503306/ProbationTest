@@ -1,8 +1,11 @@
 
 // 目前第幾張圖 
 var ShowCurrent = function () {
+    //負數重製
+    if (counter < 0)
+        counter = itemsCount -1;
     /*絕對值因為如果第一張往左 會是負數*/
-    var itemToShow = Math.abs(counter % itemsCount) ;
+    var itemToShow = (counter % itemsCount) ;
     $.each(items, function (i, item) {
         $(item).removeClass('show');
     });
@@ -27,3 +30,4 @@ function showAssign(count) {
     counter = count;
     ShowCurrent();
 }
+
