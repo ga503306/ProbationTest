@@ -43,7 +43,7 @@
 </div>
 <div class="clearfix"></div>
 <div class="container-72 row">
-    <div class="col-lg-3 d-flex justify-content-center">
+    <div class="col-lg-3 mt-5 d-flex justify-content-center">
         <div class="card shadow" style="width: 26rem;">
             <div class="card-body">
                 <h5 class="card-title">線上課程</h5>
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3 d-flex justify-content-center">
+    <div class="col-lg-3 mt-5 d-flex justify-content-center">
         <div class="card shadow" style="width: 26rem;">
             <div class="card-body">
                 <h5 class="card-title">募資課程</h5>
@@ -59,7 +59,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3 d-flex justify-content-center">
+    <div class="col-lg-3 mt-5 d-flex justify-content-center">
         <div class="card shadow" style="width: 26rem;">
             <div class="card-body">
                 <h5 class="card-title">訂閱課程</h5>
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3 d-flex justify-content-center">
+    <div class="col-lg-3 mt-5 d-flex justify-content-center">
         <div class="card shadow" style="width: 26rem;">
             <div class="card-body">
                 <h5 class="card-title">Podcast</h5>
@@ -514,15 +514,29 @@
 </div>
 <div class="clearfix"></div>
 <div class="mt-5"></div>
+
 <script>
-    //記得開imageslider js  圖片輪播2
+    //for imageslider js
     var counter = 0,
         slide = $('#slide2'),
         items = slide.find('img'), // 抓取所有 img
-        items_btn = slide.find('div').find('label') //抓底下按鈕
-    itemsCount = items.length, // 圖片總數
+        items_btn = slide.find('div').find('label'), //抓底下按鈕
+        itemsCount = items.length, // 圖片總數
         prevBtn = $(".display-left"), // 上一張按鈕
         nextBtn = $(".display-right"), // 下一張按鈕
-        timer = 999999,
+        timer = 1000,
         interval = window.setInterval(ShowNext, timer);  // 設定循環
+
+    $(function () {
+        // 滑鼠移到 #slider 上方時，停止循環計時
+        slide.mouseover(function () {
+            interval = clearInterval(interval);
+        });
+        // 滑鼠離開 #slider 時，重新開始循環計時
+        slide.mouseout(function () {
+            interval = window.setInterval(ShowNext, timer);
+        });
+
+    });
+
 </script>
