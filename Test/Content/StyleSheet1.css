@@ -187,10 +187,17 @@ footer {
 /*紅色col3 區塊*/
 .container-72 {
   margin-right: 3rem;
-  margin-left: 3rem;
-  margin-top: 2rem; }
+  margin-left: 3rem; }
   .container-72 .card {
-    border-radius: 10px; }
+    top: 0px;
+    border-radius: 10px;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear; }
+    .container-72 .card:hover {
+      top: -30px; }
   .container-72 .shadow {
     box-shadow: 8px 0.5rem 11px rgba(0, 0, 0, 0.75) !important; }
   .container-72 .card-text {

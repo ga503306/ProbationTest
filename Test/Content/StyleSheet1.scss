@@ -234,10 +234,19 @@ footer {
 .container-72 {
     margin-right: 3rem;
     margin-left: 3rem;
-    margin-top: 2rem;
 
     .card {
+        top: 0px;
         border-radius: 10px;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        transition: all .3s linear;
+
+        &:hover {
+            top: -30px;
+        }
     }
 
     .shadow {
