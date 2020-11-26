@@ -1,0 +1,528 @@
+﻿
+@{
+    ViewBag.Title = "Viewtest";
+    Layout = "~/Views/Shared/_Layout3study.cshtml";
+}
+
+<div class="container-imageslider">
+    @*圖片輪播2*@
+    <div id="slide2" style="position: relative;">
+
+        <img src="~/Images/7.jpg" class="show" />
+        <img src="~/Images/2.jpg" />
+        <img src="~/Images/3.png" />
+        <img src="~/Images/4.jpg" />
+        <img src="~/Images/5.jpg" />
+        <img src="~/Images/6.jpg" />
+
+        <div class="display-left-div" onclick="ShowPrev()">
+
+        </div>
+        <div class="display-right-div" onclick="ShowNext()">
+
+        </div>
+        <span onclick="ShowPrev()"><i class="fa fa-chevron-left display-left"></i></span>
+        <span onclick="ShowNext()"><i class="fa fa-chevron-right display-right"></i></span>
+        @*<button class="display-left" onclick="ShowPrev()">&#10094;</button>
+            <button class="display-right" onclick="ShowNext()">&#10095;</button>*@
+        <input type="radio" name="radio-btn" id="radio1" style="display:none;" onclick="javascript: showAssign(0);" />
+        <input type="radio" name="radio-btn" id="radio2" style="display:none;" onclick="javascript: showAssign(1);" />
+        <input type="radio" name="radio-btn" id="radio3" style="display:none;" onclick="javascript: showAssign(2);" />
+        <input type="radio" name="radio-btn" id="radio4" style="display:none;" onclick="javascript: showAssign(3);" />
+        <input type="radio" name="radio-btn" id="radio5" style="display:none;" onclick="javascript: showAssign(4);" />
+        <input type="radio" name="radio-btn" id="radio6" style="display:none;" onclick="javascript: showAssign(5);" />
+        <div class="col-12 navigation-manual d-flex justify-content-center">
+            <label for="radio1" class="manual-btn manual-btn-hover"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-72 row">
+    <div class="col-lg-3 d-flex justify-content-center">
+        <div class="card shadow" style="width: 26rem;">
+            <div class="card-body">
+                <h5 class="card-title">線上課程</h5>
+                <p class="card-text">一次付費， 自我進修</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center">
+        <div class="card shadow" style="width: 26rem;">
+            <div class="card-body">
+                <h5 class="card-title">募資課程</h5>
+                <p class="card-text">募集你有興趣的課程</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center">
+        <div class="card shadow" style="width: 26rem;">
+            <div class="card-body">
+                <h5 class="card-title">訂閱課程</h5>
+                <p class="card-text">長期學習，了解新知</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center">
+        <div class="card shadow" style="width: 26rem;">
+            <div class="card-body">
+                <h5 class="card-title">Podcast</h5>
+                <p class="card-text">只要耳朵輕鬆學</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-70">
+    <div class="col-lg-12">
+        <span class="icon"><i class="fa fa-search" style="font-size: 45px; color: dodgerblue;"></i></span>
+        <input type="search" id="search" placeholder="推薦: 寶寶手語" />
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-74 mt-5">
+    <div class="col-lg-12">
+        <p class="caption">熱門文章</p>
+    </div>
+    <div class="col-lg-12 row card-position">
+        <div class="col-lg-4 container-card">
+            <div class="card mb-3" style="max-width: 540px;height: 87% !important;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/Images/article1.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-type-limited"><i class="fa fa-clock-o"></i> &nbsp; 限時公開只剩30 小時 12 分</p>
+                            <h5 class="card-title">【限時公開】美大選前，台股可留意這3大族群，資金降到這台股可留意這3大族群，資金降到這</h5>
+                            <p class="card-text"><small class="text-muted">股市大牛 你的投資牛棚</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card mb-3" style="max-width: 540px;height: 87% !important;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/Images/article2.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-type-limited"><i class="fa fa-clock-o"></i> &nbsp; 限時公開只剩30 小時 12 分</p>
+                            <h5 class="card-title">【限時公開】美大選關鍵週2對策！煙火行情逢高要逃命，暴雷煙火行情逢高要逃命，暴雷</h5>
+                            <p class="card-text"><small class="text-muted">迪釀《白話總經投資學院》</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card mb-3" style="max-width: 540px;height: 87% !important;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/Images/article3.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-type-hot">熱門文章</p>
+                            <h5 class="card-title">零股交易 今日上限: 不讓獲利被手續費吃光</h5>
+                            <p class="card-text"><small class="text-muted">迪釀《白話總經投資學院》</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card mb-3" style="max-width: 540px;height: 87% !important;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/Images/article4.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-type-hot">熱門文章</p>
+                            <h5 class="card-title">【限時公開】美大選前，台股可留意這3大族群，資金降到這台股可留意這3大族群，資金降到這</h5>
+                            <p class="card-text"><small class="text-muted">股市大牛 你的投資牛棚</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card mb-3" style="max-width: 540px;height: 87% !important;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/Images/article5.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-type-hot">熱門文章</p>
+                            <h5 class="card-title">【限時公開】美大選關鍵週2對策！煙火行情逢高要逃命，暴雷煙火行情逢高要逃命，暴雷</h5>
+                            <p class="card-text"><small class="text-muted">股市大牛 你的投資牛棚</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card mb-3" style="max-width: 540px;height: 87% !important;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/Images/article6.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-type-hot">熱門文章</p>
+                            <h5 class="card-title">【限時公開】美大選前，台股可留意這3大族群，資金降到這台股可留意這3大族群，資金降到這</h5>
+                            <p class="card-text"><small class="text-muted">股市大牛 你的投資牛棚</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-74 mt-5">
+    <div class="col-lg-12">
+        <p class="caption">熱門課程</p>
+    </div>
+    <div class="col-log-12 row card-position">
+        <div class="col-lg-4 container-card">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/20cff9e1-136d-4aed-b34d-b19c7c04ee6f.png" class="card-img-top" alt="...">
+                <div class="hover-mask">
+                    <h2 class="project-title">標題</h2>
+                    <p>內容</p>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">英文麻瓜家長: 也能打造的沉浸式學習環境</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/d88d78a3-793f-4a54-a1ed-ecf229ec2ade_220_165.png" class="card-img-top" alt="...">
+                <div class="img-great hover-mask2">
+                    <h2 class="project-title">標題</h2>
+                    <p>內容</p>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">六個月方案: 連日本人都以為你是日本人的日文課連日本人都以為你是日本人的日文課連日本人都以為你是日本人的日文課</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card ">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/c70256b7-d07a-4032-a74d-651700f7c6a1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">成為開業塔羅師的必修課:相信直覺而不迷信</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 mt-4">
+        <a href="#" class="button-more">查看更多》</a>
+    </div>
+
+</div>
+<div class="clearfix"></div>
+<div class="container-74 mt-5">
+    <div class="col-lg-12">
+        <p class="caption">熱門課程</p>
+    </div>
+    <div class="col-log-12 row card-position">
+        <div class="col-lg-4 container-card">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/20cff9e1-136d-4aed-b34d-b19c7c04ee6f.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">英文麻瓜家長: 也能打造的沉浸式學習環境</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/d88d78a3-793f-4a54-a1ed-ecf229ec2ade_220_165.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">六個月方案: 連日本人都以為你是日本人的日文課連日本人都以為你是日本人的日文課連日本人都以為你是日本人的日文課</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card ">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/c70256b7-d07a-4032-a74d-651700f7c6a1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">成為開業塔羅師的必修課:相信直覺而不迷信</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 mt-4">
+        <a href="#" class="button-more">查看更多》</a>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-20 mt-5">
+    <div class="col-lg-12 input-position text-center h2">為你精選: 每周課程推薦</div>
+    <div class="row mt-5">
+        <div class="col-lg-6 img-box no-gutters">
+            <img src="~/Images/class.png" />
+        </div>
+        <div class="col-lg-6 img-box no-gutters">
+            <img src="~/Images/class.png" />
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-74 mt-5">
+    <div class="col-lg-12">
+        <p class="caption">募資課程</p>
+    </div>
+    <div class="col-log-12 row card-position">
+        <div class="col-lg-4 container-card">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/20cff9e1-136d-4aed-b34d-b19c7c04ee6f.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">英文麻瓜家長: 也能打造的沉浸式學習環境</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/d88d78a3-793f-4a54-a1ed-ecf229ec2ade_220_165.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">六個月方案: 連日本人都以為你是日本人的日文課連日本人都以為你是日本人的日文課連日本人都以為你是日本人的日文課</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 container-card ">
+            <div class="card h-100" style="width: 30rem;">
+                <img src="https://www.xn--fhqr87bwm4a.tw/RES/Images/c70256b7-d07a-4032-a74d-651700f7c6a1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">成為開業塔羅師的必修課:相信直覺而不迷信</h5>
+                    <div class="col-lg-12 card-tag">
+                        <p># 英語</p>
+                        <p># 親子</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-rating">
+                            <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                        </div>
+                        <div class="col-lg-7 card-rating-text">
+                            <span>41則評價</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 card-text card-people">
+                            <p>610位同學</p>
+                        </div>
+                        <div class="col-lg-7 card-text card-price">
+                            <p>NT$ 1,200</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer" style="background:#007bff;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 mt-4">
+        <a href="#" class="button-more">查看更多》</a>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="mt-5"></div>
+<script>
+    //記得開imageslider js  圖片輪播2
+    var counter = 0,
+        slide = $('#slide2'),
+        items = slide.find('img'), // 抓取所有 img
+        items_btn = slide.find('div').find('label') //抓底下按鈕
+    itemsCount = items.length, // 圖片總數
+        prevBtn = $(".display-left"), // 上一張按鈕
+        nextBtn = $(".display-right"), // 下一張按鈕
+        timer = 999999,
+        interval = window.setInterval(ShowNext, timer);  // 設定循環
+</script>

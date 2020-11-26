@@ -1,0 +1,468 @@
+﻿@charset "UTF-8";
+header .header-middle-area {
+  position: relative; }
+
+#header {
+  font-family: "Taipei Sans TC","微軟正黑體","Microsoft JhengHei" !important; }
+
+ul {
+  padding-left: 0;
+  margin: 0; }
+
+.main-logo {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem; }
+  .main-logo img {
+    width: 140px;
+    padding-left: 2px;
+    padding-top: 5px; }
+
+.logo {
+  width: auto;
+  height: 50px; }
+
+.navbar-light .navbar-nav li.nav-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  flex: 0 0 auto; }
+
+.navbar-light .navbar-nav .nav-link {
+  padding: .2rem 1.2rem;
+  font-size: 1.2rem;
+  color: #000000;
+  font-family: "Taipei Sans TC","微軟正黑體","Microsoft JhengHei" !important;
+  border-right: 1px solid white; }
+
+/*.navbar-toggle {
+    position: relative;
+    background-color: transparent;
+    background-image: none;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    padding: .25rem .75rem;
+
+    .icon-bar {
+        display: block;
+        width: 26px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #ffc107;
+
+        + {
+            .icon-bar {
+                margin-top: 4px;
+            }
+        }
+    }
+}*/
+.nav-item:hover .dropdown-menu {
+  display: block !important; }
+
+.navbar-custom {
+  padding-right: 45px;
+  padding-left: 60px; }
+
+.padding0 {
+  min-width: 1200px; }
+
+.cartNumberBadge {
+  background-color: #999999; }
+
+footer {
+  background-color: #4e91c7; }
+
+.footer-custom {
+  position: initial;
+  width: 100%;
+  height: 160px;
+  background-color: #4e91c7; }
+  .footer-custom .footer-item-vertical {
+    flex-direction: column;
+    /*.footer-img {
+            width: 20px;
+            height: 20px;
+        }*/ }
+    .footer-custom .footer-item-vertical .footer-item-center {
+      display: flex;
+      justify-content: center;
+      max-height: 86px;
+      /*hover flip 效果*/ }
+      .footer-custom .footer-item-vertical .footer-item-center span {
+        color: #5a5959;
+        font-size: large;
+        font-weight: 900; }
+      .footer-custom .footer-item-vertical .footer-item-center:hover .footer-item-img {
+        -webkit-transform: rotateY(360deg);
+        /* Safari and Chrome */
+        -moz-transform: rotateY(360deg);
+        /* Firefox */
+        -ms-transform: rotateY(360deg);
+        /* IE 9 */
+        -o-transform: rotateY(360deg);
+        /* Opera */
+        transform: rotateY(360deg); }
+    .footer-custom .footer-item-vertical .footer-item-img {
+      width: 130px;
+      height: auto;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear; }
+
+/*圖片輪播*/
+/*左右箭頭*/
+.display-right {
+  color: #ffffff99;
+  font-size: 4rem;
+  position: absolute;
+  top: 16vh;
+  right: 0%; }
+
+.display-left {
+  color: #ffffff99;
+  font-size: 4rem;
+  position: absolute;
+  top: 16vh;
+  left: 0%; }
+
+/*左右區域*/
+.display-left-div {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  height: 100%;
+  width: 10%; }
+
+.display-right-div {
+  position: absolute;
+  top: 0px;
+  right: 0%;
+  height: 100%;
+  width: 10%; }
+
+/*按鈕*/
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -1.5rem; }
+
+.manual-btn {
+  border: 2px solid #c5c5c5;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px; }
+  .manual-btn:hover {
+    background: #c5c5c5; }
+
+.manual-btn-hover {
+  background: #c5c5c5; }
+
+/*容器左右間距*/
+.container-imageslider {
+  margin-top: 2rem;
+  margin-right: 4rem;
+  margin-left: 4rem; }
+
+/*圖片*/
+#slide2 img {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  display: block;
+  width: 100%;
+  height: 380px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s; }
+  #slide2 img:first-child {
+    position: static; }
+
+#slide2 img.show {
+  opacity: 1;
+  visibility: visible; }
+
+/*紅色col3 區塊*/
+.container-72 {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 2rem; }
+  .container-72 .card {
+    border-radius: 10px; }
+  .container-72 .shadow {
+    box-shadow: 8px 0.5rem 11px rgba(0, 0, 0, 0.75) !important; }
+  .container-72 .card-text {
+    color: darkgray;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px; }
+
+/*搜尋框 區塊*/
+.container-70 {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  /*搜尋放大鏡 hover放大*/ }
+  .container-70 #search {
+    width: 100%;
+    height: 50px;
+    background: white;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 80px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+    /*滑鼠點進input後 focus*/ }
+    .container-70 #search:focus {
+      outline: none;
+      border-color: #df9eed;
+      box-shadow: 0 0 20px #df9eed; }
+  .container-70 .icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    z-index: 1;
+    color: #4f5b66;
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease; }
+  .container-70:hover .icon {
+    -webkit-transform: scale(2.5);
+    /* Safari and Chrome */
+    -moz-transform: scale(2.5);
+    /* Firefox */
+    -ms-transform: scale(2.5);
+    /* IE 9 */
+    -o-transform: scale(2.5);
+    /* Opera */
+    transform: scale(2.5); }
+
+/*熱門文章 區塊*/
+.container-74 {
+  margin-right: 3rem;
+  margin-left: 5rem;
+  /*標頭*/
+  /*查看更多*/
+  /*卡片位置*/ }
+  .container-74 .caption {
+    font-size: 2rem; }
+  .container-74 .button-more {
+    padding-left: 1rem;
+    color: black;
+    background: #007bff;
+    font-size: 2rem;
+    float: right; }
+  .container-74 .card-position {
+    padding-left: 5rem;
+    /*卡片種類 限時*/
+    /*卡片種類 熱門*/
+    /*卡片標題*/
+    /*卡片標籤*/
+    /*卡片評價*/
+    /*卡片評價文字*/
+    /*卡片人數*/
+    /*卡片金額*/ }
+    .container-74 .card-position .container-card {
+      /*卡片 hover特效*/ }
+      .container-74 .card-position .container-card .card {
+        overflow: hidden;
+        border-radius: 20px; }
+      .container-74 .card-position .container-card .hover-mask {
+        position: absolute;
+        padding: 0;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out; }
+      .container-74 .card-position .container-card .hover-mask2 {
+        position: absolute;
+        bottom: 0;
+        background: black;
+        background: rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: 0.5s cubic-bezier(0, 1.38, 0.51, 1.01);
+        filter: alpha(opacity=60);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; }
+      .container-74 .card-position .container-card:hover .hover-mask {
+        opacity: .95;
+        filter: alpha(opacity=95); }
+        .container-74 .card-position .container-card:hover .hover-mask .project-title {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1; }
+        .container-74 .card-position .container-card:hover .hover-mask p {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+          -webkit-transition: all 0.3s ease-out .2s;
+          transition: all 0.3s ease-out .2s; }
+      .container-74 .card-position .container-card:hover .hover-mask2 {
+        height: 100%; }
+        .container-74 .card-position .container-card:hover .hover-mask2 .project-title {
+          position: relative;
+          color: white;
+          padding: 10px;
+          font-size: 26px;
+          line-height: 34px;
+          font-weight: 300;
+          text-align: center; }
+        .container-74 .card-position .container-card:hover .hover-mask2 p {
+          position: relative;
+          color: white;
+          padding: 10px;
+          font-size: 26px;
+          line-height: 34px;
+          font-weight: 300;
+          text-align: center; }
+      .container-74 .card-position .container-card .hover-mask .project-title {
+        position: relative;
+        color: #fff;
+        top: 50%;
+        margin: 0;
+        margin-top: -50px;
+        padding: 10px;
+        font-size: 26px;
+        line-height: 34px;
+        font-weight: 300;
+        text-align: center;
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out; }
+      .container-74 .card-position .container-card .hover-mask p {
+        position: relative;
+        color: #fff;
+        top: 50%;
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        text-align: center;
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        -webkit-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s; }
+    .container-74 .card-position .card-img {
+      width: 150px; }
+    .container-74 .card-position .card-type-limited {
+      color: red;
+      background-color: #ff1e1e4a;
+      border-radius: 5px;
+      display: inline-block;
+      padding-left: 1rem;
+      padding-right: 1rem; }
+    .container-74 .card-position .card-type-hot {
+      color: black;
+      background-color: rgba(230, 230, 230, 0.8);
+      border-radius: 5px;
+      display: inline-block;
+      padding-left: 1rem;
+      padding-right: 1rem; }
+    .container-74 .card-position .card-title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal; }
+    .container-74 .card-position .card-tag {
+      display: flex;
+      margin: 0;
+      padding: 0; }
+      .container-74 .card-position .card-tag p {
+        margin-right: 1rem;
+        border-style: solid;
+        border-width: 1px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 7px; }
+    .container-74 .card-position .card-rating span {
+      color: #ffc41d;
+      font-size: 2rem; }
+    .container-74 .card-position .card-rating-text {
+      margin-top: 15px; }
+      .container-74 .card-position .card-rating-text span {
+        color: #000000;
+        font-size: 1rem; }
+    .container-74 .card-position .card-people {
+      margin-top: 15px;
+      font-size: 1rem; }
+    .container-74 .card-position .card-price {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 2rem;
+      color: #007bff; }
+
+/*精選*/
+.container-20 {
+  margin-right: 3rem;
+  margin-left: 3rem; }
+  .container-20 .img-box {
+    display: flex;
+    justify-content: center; }
+  .container-20 img {
+    width: 100%;
+    height: auto; }
+
+/*購物車側邊*/
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0; }
+  to {
+    right: 0;
+    opacity: 1; } }
+
+/*購物車按鈕 hover*/
+.sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #cacaca;
+  position: fixed !important;
+  z-index: 2;
+  overflow: auto;
+  right: 0; }
+
+.bar-block .bar-item {
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  text-align: center;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0; }
+
+.animate-right {
+  animation: animateright 0.4s; }
+
+.btn_shoppingcat {
+  width: 28px;
+  background: #007bff;
+  position: fixed;
+  top: 48vh;
+  right: 0; }
+
+.btn_contact {
+  background: #007bff;
+  width: 28px;
+  position: fixed;
+  top: 53vh;
+  right: 0; }
