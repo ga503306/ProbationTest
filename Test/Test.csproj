@@ -177,6 +177,7 @@
     <Content Include="Images\footer2.png" />
     <Content Include="Images\footer3.png" />
     <Content Include="Images\footer4.png" />
+    <Content Include="Scripts\bootstrap-4-navbar.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\FontAwesome.otf" />

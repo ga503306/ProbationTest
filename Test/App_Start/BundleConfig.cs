@@ -27,7 +27,8 @@ namespace Test
                       "~/Content/site.css",
                       "~/Content/StyleSheet1.css"));
             bundles.Add(new StyleBundle("~/bundles/js").Include(
-                   "~/Scripts/imageslider.js"
+                   "~/Scripts/imageslider.js",
+                   "~/Scripts/bootstrap-4-navbar.js"
                    ));
         }
     }

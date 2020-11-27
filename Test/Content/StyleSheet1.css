@@ -19,13 +19,23 @@ ul {
     padding-top: 5px; }
 
 .logo {
-  width: auto;
-  height: 50px; }
+  width: 330px;
+  height: auto; }
 
+/*導覽列*/
 .navbar-light .navbar-nav li.nav-item {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   flex: 0 0 auto; }
+  .navbar-light .navbar-nav li.nav-item a {
+    font-size: 36px;
+    font-weight: 600;
+    color: #565655 !important; }
+  .navbar-light .navbar-nav li.nav-item ul.dropdown-menu a {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #565655 !important; }
 
 .navbar-light .navbar-nav .nav-link {
   padding: .2rem 1.2rem;
@@ -56,8 +66,62 @@ ul {
         }
     }
 }*/
-.nav-item:hover .dropdown-menu {
-  display: block !important; }
+/*導覽列hover*/
+/*.nav-item {
+    &:hover {
+        .dropdown-menu {
+            display: block !important;
+        }
+    }
+}*/
+/*微調 客製化*/
+/*導覽選單 二層左側boder*/
+.dropdown-menu.dropdown-menu-son:after {
+  content: '';
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  left: -3px;
+  top: 0px;
+  background-color: black;
+  border: 1px solid transparent;
+  border-width: 0 3px 0 0;
+  border-image: linear-gradient(to top, white, #c3c4c3 25%, #c3c4c3 75%, white 100%);
+  border-image-slice: 1; }
+
+/*導覽選單 文字底下boder*/
+.dropdown-item:before {
+  content: '';
+  width: 80%;
+  height: 3px;
+  position: absolute;
+  left: calc(12% - 5px);
+  margin-top: 35px;
+  background-color: #ebecec; }
+
+.dropdown-menu {
+  left: 10px;
+  min-width: 12.5rem;
+  padding-bottom: 60px; }
+
+/*標題不加箭頭 >*/
+.nav-link.dropdown-toggle::after {
+  display: none !important; }
+
+/*箭頭 >*/
+.dropdown-toggle::after {
+  border: 5px solid #b4c3cc;
+  border-width: 3px 3px 0 0;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-top: 13px;
+  /*display: none !important;*/ }
+
+.dropdown-item-arrow p {
+  margin-top: 5px;
+  margin-bottom: 0rem; }
 
 .navbar-custom {
   padding-right: 45px;
@@ -162,7 +226,6 @@ footer {
 
 /*容器左右間距*/
 .container-imageslider {
-  margin-top: 2rem;
   margin-right: 4rem;
   margin-left: 4rem; }
 
@@ -173,7 +236,7 @@ footer {
   left: 0%;
   display: block;
   width: 100%;
-  height: 380px;
+  height: 560px;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s; }
@@ -210,16 +273,16 @@ footer {
 .container-70 {
   margin-right: 3rem;
   margin-left: 3rem;
-  margin-top: 2rem;
+  display: flex;
   /*搜尋放大鏡 hover放大*/ }
   .container-70 #search {
     width: 100%;
     height: 50px;
     background: white;
-    font-size: 10pt;
+    font-size: 20pt;
     float: left;
     color: #63717f;
-    padding-left: 80px;
+    padding-left: 6rem;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 15px;
@@ -230,7 +293,7 @@ footer {
       box-shadow: 0 0 20px #df9eed; }
   .container-70 .icon {
     position: absolute;
-    top: 50%;
+    top: 3%;
     margin-left: 17px;
     z-index: 1;
     color: #4f5b66;
