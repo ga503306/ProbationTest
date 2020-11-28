@@ -33,7 +33,11 @@ textarea {
 .navbar-custom {
     background-color: white;
 }
-
+@media (max-width: 575.99px) {
+    .navbar {
+        min-height: auto !important;
+    }
+}
 .navbar {
     min-height: 172px;
 }

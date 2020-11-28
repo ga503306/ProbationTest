@@ -26,7 +26,7 @@ ul {
 }
 
 .logo {
-    width: 330px;
+    width: 100%;
     height: auto;
 }
 /*導覽列*/
@@ -284,7 +284,7 @@ footer {
         left: 0%;
         display: block;
         width: 100%;
-        height: 560px;
+        max-height: 560px;
         opacity: 0;
         visibility: hidden;
         transition: 0.8s;
@@ -300,13 +300,12 @@ footer {
     }
 }
 /*紅色col3 區塊*/
-.container-72 {
+.container-39 {
     margin-right: 3rem;
     margin-left: 3rem;
 
     .card {
         top: 0px;
-        border-radius: 10px;
         -webkit-transition: all .3s linear;
         -moz-transition: all .3s linear;
         -ms-transition: all .3s linear;
@@ -322,17 +321,26 @@ footer {
         box-shadow: 8px 0.5rem 11px rgba(0, 0, 0, 0.75) !important;
     }
 
+    .card-title {
+        font-weight: bold;
+    }
+
     .card-text {
         color: darkgray;
-        font-size: 30px;
+        font-size: 15.7px;
         margin-top: 30px;
-        margin-bottom: 20px;
+    }
+
+    @media (min-width: 575.99px) {
+        .cardbox {
+            margin-left: 40px;
+        }
     }
 }
 /*搜尋框 區塊*/
 .container-70 {
-    margin-right: 3rem;
-    margin-left: 3rem;
+    /*margin-right: 3rem;
+    margin-left: 3rem;*/
     display: flex;
 
     #search {
@@ -376,6 +384,28 @@ footer {
             transform: scale(2.5);
         }
     }
+    /*底下文字tag*/
+    .search-tag {
+        p {
+            &:first-child {
+                margin-left: 5rem !important;
+            }
+
+            @media (max-width: 575.99px) {
+                &:first-child {
+                    margin-left: 0.25rem !important;
+                }
+            }
+
+            min-width: 113px;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            background: #4d6cb3;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    }
 }
 /*熱門文章 區塊*/
 .container-74 {
@@ -386,23 +416,45 @@ footer {
         font-size: 2rem;
     }
     /*查看更多*/
-    .button-more {
-        padding-left: 1rem;
-        color: black;
-        background: #007bff;
-        font-size: 2rem;
-        float: right;
+    .container-more {
+        padding-right: 6rem;
+        /*查看更多*/
+        .button-more {
+            padding-left: 1rem;
+            color: black;
+            background: #4e91c7;
+            font-size: 2rem;
+            float: right;
+        }
     }
     /*卡片位置*/
+    @media (max-width: 575.99px) {
+        .card-position {
+            padding-left: 0rem !important;
+        }
+    }
+
     .card-position {
-        padding-left: 5rem;
+        padding-left: 3rem;
+        padding-right: 4rem;
 
         .container-card {
+            @media (max-width: 575.99px) {
+                margin-top: 1rem;
+            }
+
+            padding-right: 3rem;
+
             .card {
+                min-width: 220px;
                 overflow: hidden;
                 border-radius: 20px;
             }
             /*卡片 hover特效*/
+            .hover-mask-box {
+                position: inherit;
+            }
+
             .hover-mask {
                 position: absolute;
                 padding: 0;
@@ -514,7 +566,8 @@ footer {
         }
 
         .card-img {
-            width: 150px;
+            min-width: 150px;
+            width: 100%;
         }
         /*卡片種類 限時*/
         .card-type-limited {
@@ -535,6 +588,19 @@ footer {
             padding-right: 1rem;
         }
         /*卡片標題*/
+        .card-title-article {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #565655;
+        }
+        /*卡片標題*/
         .card-title {
             overflow: hidden;
             white-space: nowrap;
@@ -543,6 +609,9 @@ footer {
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             white-space: normal;
+            font-weight: bold;
+            font-size: 3rem;
+            color: #565655;
         }
         /*卡片標籤*/
         .card-tag {
@@ -557,6 +626,7 @@ footer {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
                 border-radius: 7px;
+                font-size: 2rem;
             }
         }
         /*卡片評價*/
@@ -565,14 +635,16 @@ footer {
                 color: #ffc41d;
                 font-size: 2rem;
             }
+
+            .fa {
+                margin-right: 5px;
+            }
         }
         /*卡片評價文字*/
         .card-rating-text {
-            margin-top: 15px;
-
             span {
-                color: #000000;
-                font-size: 1rem;
+                color: #565655;
+                font-size: 2rem;
             }
         }
         /*卡片人數*/
@@ -585,7 +657,11 @@ footer {
             display: flex;
             justify-content: flex-end;
             font-size: 2rem;
-            color: #007bff;
+            color: #4e91c7;
+        }
+
+        .card-footer {
+            background: #4e91c7;
         }
     }
 }
@@ -645,17 +721,20 @@ footer {
 }
 
 .btn_shoppingcat {
-    width: 28px;
-    background: #007bff;
+    background: #4e91c7;
+    width: 50px;
+    font-size:25px;
     position: fixed;
     top: 48vh;
     right: 0;
 }
 
 .btn_contact {
-    background: #007bff;
-    width: 28px;
+    background: #4e91c7;
+    width: 50px;
+    font-size: 25px;
+    font-weight: bold;
     position: fixed;
-    top: 53vh;
+    top: 58vh;
     right: 0;
 }

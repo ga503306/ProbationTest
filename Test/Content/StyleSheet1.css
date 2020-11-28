@@ -19,7 +19,7 @@ ul {
     padding-top: 5px; }
 
 .logo {
-  width: 330px;
+  width: 100%;
   height: auto; }
 
 /*導覽列*/
@@ -236,7 +236,7 @@ footer {
   left: 0%;
   display: block;
   width: 100%;
-  height: 560px;
+  max-height: 560px;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s; }
@@ -248,33 +248,37 @@ footer {
   visibility: visible; }
 
 /*紅色col3 區塊*/
-.container-72 {
+.container-39 {
   margin-right: 3rem;
   margin-left: 3rem; }
-  .container-72 .card {
+  .container-39 .card {
     top: 0px;
-    border-radius: 10px;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear; }
-    .container-72 .card:hover {
+    .container-39 .card:hover {
       top: -30px; }
-  .container-72 .shadow {
+  .container-39 .shadow {
     box-shadow: 8px 0.5rem 11px rgba(0, 0, 0, 0.75) !important; }
-  .container-72 .card-text {
+  .container-39 .card-title {
+    font-weight: bold; }
+  .container-39 .card-text {
     color: darkgray;
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 20px; }
+    font-size: 15.7px;
+    margin-top: 30px; }
+  @media (min-width: 575.99px) {
+    .container-39 .cardbox {
+      margin-left: 40px; } }
 
 /*搜尋框 區塊*/
 .container-70 {
-  margin-right: 3rem;
-  margin-left: 3rem;
+  /*margin-right: 3rem;
+    margin-left: 3rem;*/
   display: flex;
-  /*搜尋放大鏡 hover放大*/ }
+  /*搜尋放大鏡 hover放大*/
+  /*底下文字tag*/ }
   .container-70 #search {
     width: 100%;
     height: 50px;
@@ -312,6 +316,19 @@ footer {
     -o-transform: scale(2.5);
     /* Opera */
     transform: scale(2.5); }
+  .container-70 .search-tag p {
+    min-width: 113px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: #4d6cb3;
+    border-radius: 5px;
+    display: inline-block; }
+    .container-70 .search-tag p:first-child {
+      margin-left: 5rem !important; }
+    @media (max-width: 575.99px) {
+      .container-70 .search-tag p:first-child {
+        margin-left: 0.25rem !important; } }
 
 /*熱門文章 區塊*/
 .container-74 {
@@ -322,16 +339,24 @@ footer {
   /*卡片位置*/ }
   .container-74 .caption {
     font-size: 2rem; }
-  .container-74 .button-more {
-    padding-left: 1rem;
-    color: black;
-    background: #007bff;
-    font-size: 2rem;
-    float: right; }
+  .container-74 .container-more {
+    padding-right: 6rem;
+    /*查看更多*/ }
+    .container-74 .container-more .button-more {
+      padding-left: 1rem;
+      color: black;
+      background: #4e91c7;
+      font-size: 2rem;
+      float: right; }
+  @media (max-width: 575.99px) {
+    .container-74 .card-position {
+      padding-left: 0rem !important; } }
   .container-74 .card-position {
-    padding-left: 5rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
     /*卡片種類 限時*/
     /*卡片種類 熱門*/
+    /*卡片標題*/
     /*卡片標題*/
     /*卡片標籤*/
     /*卡片評價*/
@@ -339,10 +364,17 @@ footer {
     /*卡片人數*/
     /*卡片金額*/ }
     .container-74 .card-position .container-card {
+      padding-right: 3rem;
       /*卡片 hover特效*/ }
+      @media (max-width: 575.99px) {
+        .container-74 .card-position .container-card {
+          margin-top: 1rem; } }
       .container-74 .card-position .container-card .card {
+        min-width: 220px;
         overflow: hidden;
         border-radius: 20px; }
+      .container-74 .card-position .container-card .hover-mask-box {
+        position: inherit; }
       .container-74 .card-position .container-card .hover-mask {
         position: absolute;
         padding: 0;
@@ -429,7 +461,8 @@ footer {
         -webkit-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s; }
     .container-74 .card-position .card-img {
-      width: 150px; }
+      min-width: 150px;
+      width: 100%; }
     .container-74 .card-position .card-type-limited {
       color: red;
       background-color: #ff1e1e4a;
@@ -444,6 +477,17 @@ footer {
       display: inline-block;
       padding-left: 1rem;
       padding-right: 1rem; }
+    .container-74 .card-position .card-title-article {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #565655; }
     .container-74 .card-position .card-title {
       overflow: hidden;
       white-space: nowrap;
@@ -451,7 +495,10 @@ footer {
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      white-space: normal; }
+      white-space: normal;
+      font-weight: bold;
+      font-size: 3rem;
+      color: #565655; }
     .container-74 .card-position .card-tag {
       display: flex;
       margin: 0;
@@ -462,15 +509,16 @@ footer {
         border-width: 1px;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        border-radius: 7px; }
+        border-radius: 7px;
+        font-size: 2rem; }
     .container-74 .card-position .card-rating span {
       color: #ffc41d;
       font-size: 2rem; }
-    .container-74 .card-position .card-rating-text {
-      margin-top: 15px; }
-      .container-74 .card-position .card-rating-text span {
-        color: #000000;
-        font-size: 1rem; }
+    .container-74 .card-position .card-rating .fa {
+      margin-right: 5px; }
+    .container-74 .card-position .card-rating-text span {
+      color: #565655;
+      font-size: 2rem; }
     .container-74 .card-position .card-people {
       margin-top: 15px;
       font-size: 1rem; }
@@ -478,7 +526,9 @@ footer {
       display: flex;
       justify-content: flex-end;
       font-size: 2rem;
-      color: #007bff; }
+      color: #4e91c7; }
+    .container-74 .card-position .card-footer {
+      background: #4e91c7; }
 
 /*精選*/
 .container-20 {
@@ -524,15 +574,18 @@ footer {
   animation: animateright 0.4s; }
 
 .btn_shoppingcat {
-  width: 28px;
-  background: #007bff;
+  background: #4e91c7;
+  width: 50px;
+  font-size: 25px;
   position: fixed;
   top: 48vh;
   right: 0; }
 
 .btn_contact {
-  background: #007bff;
-  width: 28px;
+  background: #4e91c7;
+  width: 50px;
+  font-size: 25px;
+  font-weight: bold;
   position: fixed;
-  top: 53vh;
+  top: 58vh;
   right: 0; }
